@@ -27,7 +27,12 @@ SOFTWARE.
 
 
 
-## image_picker
+## integration_test
+
+Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
+
+
+## sparrow_image_picker
 
 image_picker
 
@@ -260,11 +265,6 @@ aFileChooser
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
-
-## integration_test
-
-Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
 
 
 ## video_player

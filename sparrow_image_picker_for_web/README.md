@@ -1,6 +1,6 @@
-# image\_picker\_for\_web
+# sparrow\_image\_picker\_for\_web
 
-A web implementation of [`image_picker`][1].
+A web implementation of [`sparrow_image_picker`][1].
 
 ## Limitations on the web platform
 

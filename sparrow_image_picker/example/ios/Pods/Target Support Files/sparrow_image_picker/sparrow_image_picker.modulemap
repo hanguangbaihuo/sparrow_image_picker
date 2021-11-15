@@ -1,0 +1,6 @@
+framework module sparrow_image_picker {
+  umbrella header "sparrow_image_picker-umbrella.h"
+
+  export *
+  module * { export * }
+}

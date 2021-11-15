@@ -46,6 +46,17 @@ SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
+</string>
+			<key>License</key>
+			<string>BSD</string>
+			<key>Title</key>
+			<string>integration_test</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>image_picker
 
 Copyright 2013 The Flutter Authors. All rights reserved.
@@ -281,18 +292,7 @@ aFileChooser
 			<key>License</key>
 			<string>BSD</string>
 			<key>Title</key>
-			<string>image_picker</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
-</string>
-			<key>License</key>
-			<string>BSD</string>
-			<key>Title</key>
-			<string>integration_test</string>
+			<string>sparrow_image_picker</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

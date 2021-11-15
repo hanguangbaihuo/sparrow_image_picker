@@ -11,9 +11,9 @@ Downloaded by pub (not CocoaPods).
                        DESC
   s.homepage         = 'https://github.com/flutter/plugins'
   s.license          = { :type => 'BSD', :file => '../LICENSE' }
-  s.author           = { 'Flutter Dev Team' => 'flutter-dev@googlegroups.com' }
-  s.source           = { :http => 'https://github.com/flutter/plugins/tree/master/packages/image_picker' }
-  s.documentation_url = 'https://pub.dev/packages/image_picker'
+  s.author           = { 'Flutter Dev Team' => 'hanguangbaihuo.com' }
+  s.source           = { :http => 'https://github.com/hanguangbaihuo/sparrow_image_picker/sparrow_image_picker' }
+  s.documentation_url = 'https://pub.dev/packages/sparrow_image_picker'
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'

@@ -5,8 +5,8 @@
 import 'dart:async';
 import 'dart:math';
 import 'dart:ui';
-import 'package:image_picker_for_web/src/image_resizer_utils.dart';
-import 'package:image_picker_platform_interface/image_picker_platform_interface.dart';
+import 'package:sparrow_image_picker_for_web/src/image_resizer_utils.dart';
+import 'package:sparrow_image_picker_platform_interface/sparrow_image_picker_platform_interface.dart';
 import 'dart:html' as html;
 
 /// Helper class that resizes images.

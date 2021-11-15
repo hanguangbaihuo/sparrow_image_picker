@@ -34,12 +34,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>image_picker.xcscheme</key>
+		<key>integration_test.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>integration_test.xcscheme</key>
+		<key>sparrow_image_picker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

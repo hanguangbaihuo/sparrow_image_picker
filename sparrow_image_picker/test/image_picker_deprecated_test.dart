@@ -9,8 +9,8 @@
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:image_picker_platform_interface/image_picker_platform_interface.dart';
+import 'package:sparrow_image_picker/sparrow_image_picker.dart';
+import 'package:sparrow_image_picker_platform_interface/sparrow_image_picker_platform_interface.dart';
 import 'package:mockito/mockito.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 

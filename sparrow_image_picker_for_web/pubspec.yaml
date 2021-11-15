@@ -1,8 +1,8 @@
 name: sparrow_image_picker_for_web
-description: Web platform implementation of image_picker
-repository: https://github.com/flutter/plugins/tree/master/packages/image_picker/image_picker_for_web
-issue_tracker: https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+label%3A%22p%3A+image_picker%22
-version: 2.1.4
+description: Web platform implementation of sparrow_image_picker
+repository: https://github.com/hanguangbaihuo/sparrow_image_picker/sparrow_image_picker_for_web
+
+version: 0.0.1
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -21,7 +21,7 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  image_picker_platform_interface: ^2.2.0
+  sparrow_image_picker_platform_interface: ^0.0.1
   meta: ^1.3.0
 
 dev_dependencies:

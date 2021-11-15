@@ -16,6 +16,6 @@
 #import "FLTImagePickerPlugin.h"
 #import "FLTPHPickerSaveImageToPathOperation.h"
 
-FOUNDATION_EXPORT double image_pickerVersionNumber;
-FOUNDATION_EXPORT const unsigned char image_pickerVersionString[];
+FOUNDATION_EXPORT double sparrow_image_pickerVersionNumber;
+FOUNDATION_EXPORT const unsigned char sparrow_image_pickerVersionString[];
 

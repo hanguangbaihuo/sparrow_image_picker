@@ -6,7 +6,7 @@ environment:
   flutter: ">=2.2.0"
 
 dependencies:
-  image_picker_for_web:
+  sparrow_image_picker_for_web:
     path: ../
   flutter:
     sdk: flutter

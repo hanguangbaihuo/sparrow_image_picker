@@ -1,10 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ZLPhotoBrowser" "${PODS_CONFIGURATION_BUILD_DIR}/image_picker" "${PODS_CONFIGURATION_BUILD_DIR}/integration_test" "${PODS_CONFIGURATION_BUILD_DIR}/video_player"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ZLPhotoBrowser" "${PODS_CONFIGURATION_BUILD_DIR}/integration_test" "${PODS_CONFIGURATION_BUILD_DIR}/sparrow_image_picker" "${PODS_CONFIGURATION_BUILD_DIR}/video_player"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ZLPhotoBrowser/ZLPhotoBrowser.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/image_picker/image_picker.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/integration_test/integration_test.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/video_player/video_player.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ZLPhotoBrowser/ZLPhotoBrowser.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/integration_test/integration_test.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/sparrow_image_picker/sparrow_image_picker.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/video_player/video_player.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "AVFoundation" -framework "Accelerate" -framework "CoreMotion" -framework "Photos" -framework "PhotosUI" -framework "UIKit" -framework "ZLPhotoBrowser" -framework "image_picker" -framework "integration_test" -framework "video_player"
+OTHER_LDFLAGS = $(inherited) -framework "AVFoundation" -framework "Accelerate" -framework "CoreMotion" -framework "Photos" -framework "PhotosUI" -framework "UIKit" -framework "ZLPhotoBrowser" -framework "integration_test" -framework "sparrow_image_picker" -framework "video_player"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
