@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.lucksiege:pictureselector:v2.7.3-rc09@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bfbaf38d82107cdeaf4c715f7ff878d7/jetified-pictureselector-v2.7.3-rc09/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bfbaf38d82107cdeaf4c715f7ff878d7/jetified-pictureselector-v2.7.3-rc09/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bfbaf38d82107cdeaf4c715f7ff878d7/jetified-pictureselector-v2.7.3-rc09/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bfbaf38d82107cdeaf4c715f7ff878d7/jetified-pictureselector-v2.7.3-rc09/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.lucksiege/pictureselector/v2.7.3-rc09/a8de2fa497fef6f3636f705db2895fb1e9c662e/pictureselector-v2.7.3-rc09-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.lucksiege/pictureselector/v2.7.3-rc09/57c01267c8e41a518d3de41f840557ed8646a41e/pictureselector-v2.7.3-rc09-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

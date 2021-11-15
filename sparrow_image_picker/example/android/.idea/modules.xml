@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1448785652/android.espresso.iml" filepath="$PROJECT_DIR$/.idea/modules/-1448785652/android.espresso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/290572287/android.flutter_plugin_android_lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/290572287/android.flutter_plugin_android_lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/97711488/android.image_picker_for_web.iml" filepath="$PROJECT_DIR$/.idea/modules/97711488/android.image_picker_for_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1761578648/android.integration_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-1761578648/android.integration_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1266339066/android.sparrow_image_picker.iml" filepath="$PROJECT_DIR$/.idea/modules/-1266339066/android.sparrow_image_picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1530475304/android.video_player_web.iml" filepath="$PROJECT_DIR$/.idea/modules/1530475304/android.video_player_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-78321960/io.flutter.plugins.videoplayer.android.video_player.iml" filepath="$PROJECT_DIR$/.idea/modules/-78321960/io.flutter.plugins.videoplayer.android.video_player.iml" />
+    </modules>
+  </component>
+</project>
