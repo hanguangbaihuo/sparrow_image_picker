@@ -9,7 +9,7 @@ import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sparrow_image_picker_for_web/src/image_resizer.dart';
-import 'package:sparrow_mage_picker_platform_interface/sparrow_image_picker_platform_interface.dart';
+import 'package:sparrow_image_picker_platform_interface/sparrow_image_picker_platform_interface.dart';
 import 'package:integration_test/integration_test.dart';
 
 //This is a sample 10x10 png image

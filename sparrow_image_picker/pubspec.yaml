@@ -16,14 +16,14 @@ flutter:
         pluginClass: ImagePickerPlugin
       ios:
         pluginClass: FLTImagePickerPlugin
-      web:
-        default_package: sparrow_image_picker_for_web
+      # web:
+      #   default_package: sparrow_image_picker_for_web
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_plugin_android_lifecycle: ^2.0.1
-  sparrow_image_picker_for_web: ^0.0.1
+  # sparrow_image_picker_for_web: ^0.0.2
   sparrow_image_picker_platform_interface: ^0.0.1
 
 dev_dependencies:
