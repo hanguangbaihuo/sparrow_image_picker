@@ -1,8 +1,8 @@
 name: sparrow_image_picker_for_web
 description: Web platform implementation of sparrow_image_picker
-repository: https://github.com/hanguangbaihuo/sparrow_image_picker/sparrow_image_picker_for_web
+repository: https://github.com/hanguangbaihuo/sparrow_image_picker/tree/master/sparrow_image_picker_for_web
 
-version: 0.0.2
+version: 0.0.3
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

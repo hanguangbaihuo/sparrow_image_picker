@@ -1,8 +1,8 @@
 name: sparrow_image_picker
 description: Flutter plugin for selecting images from the Android and iOS image
   library, and taking new pictures with the camera.
-repository: https://github.com/hanguangbaihuo/sparrow_image_picker/sparrow_image_picker
-version: 0.0.1
+repository: https://github.com/hanguangbaihuo/sparrow_image_picker/tree/master/sparrow_image_picker
+version: 0.0.2
 
 environment:
   sdk: ">=2.14.0 <3.0.0"
