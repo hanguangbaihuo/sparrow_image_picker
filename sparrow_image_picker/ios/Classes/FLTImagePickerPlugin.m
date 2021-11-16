@@ -108,12 +108,26 @@ typedef NS_ENUM(NSInteger, ImagePickerClassType) { UIImagePickerClassType, PHPic
     SwiftImagesPicker *image=[[SwiftImagesPicker alloc] init];
     [image selectImagePicker:count selectImagePickerBlock:^(NSArray<UIImage *> *images,
                                                             NSArray<PHAsset *> *assets,BOOL isOriginal){
-        if(count==1){
-            
-            [self selectImageWithResult:images];
-        }else{
-            [self selectMultiImageWithResult:images];
-        }
+        [self selectImageWithResult:images];
+         
+    } cancelBlock:^(){
+        NSLog(@"image picker cancel block...");
+        self.result(nil);
+    }];
+    
+}
+/**
+multi image
+*/
+- (void)pickMultiImagePicker:(int)count result:(FlutterResult)result {
+    
+    NSLog(@"%s","pickImagePicker...");
+    NSLog(@"count=%d",count);
+    SwiftImagesPicker *image=[[SwiftImagesPicker alloc] init];
+    [image selectImagePicker:count selectImagePickerBlock:^(NSArray<UIImage *> *images,
+                                                            NSArray<PHAsset *> *assets,BOOL isOriginal){
+      
+        [self selectMultiImageWithResult:images];
         
     } cancelBlock:^(){
         NSLog(@"image picker cancel block...");
@@ -213,7 +227,8 @@ typedef NS_ENUM(NSInteger, ImagePickerClassType) { UIImagePickerClassType, PHPic
             countNumber=[NSNumber numberWithInteger:1];
         }
         int count=[countNumber intValue];
-        [self pickImagePicker:count result:self.result];
+        // [self pickImagePicker:count result:self.result];
+        [self pickMultiImagePicker:count result:self.result];
         // if (@available(iOS 14, *)) {
         
         //     NSLog(@"%s","pickMultiImage-@available");
