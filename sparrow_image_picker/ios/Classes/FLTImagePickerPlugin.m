@@ -103,15 +103,15 @@ typedef NS_ENUM(NSInteger, ImagePickerClassType) { UIImagePickerClassType, PHPic
  */
 - (void)pickImagePicker:(int)count result:(FlutterResult)result {
     
-    NSLog(@"%s","pickImagePicker...");
-    NSLog(@"count=%d",count);
+    // NSLog(@"%s","pickImagePicker...");
+    // NSLog(@"count=%d",count);
     SwiftImagesPicker *image=[[SwiftImagesPicker alloc] init];
     [image selectImagePicker:count selectImagePickerBlock:^(NSArray<UIImage *> *images,
                                                             NSArray<PHAsset *> *assets,BOOL isOriginal){
         [self selectImageWithResult:images];
          
     } cancelBlock:^(){
-        NSLog(@"image picker cancel block...");
+        // NSLog(@"image picker cancel block...");
         self.result(nil);
     }];
     
@@ -121,8 +121,8 @@ multi image
 */
 - (void)pickMultiImagePicker:(int)count result:(FlutterResult)result {
     
-    NSLog(@"%s","pickImagePicker...");
-    NSLog(@"count=%d",count);
+    // NSLog(@"%s","pickMultiImagePicker...");
+    // NSLog(@"count=%d",count);
     SwiftImagesPicker *image=[[SwiftImagesPicker alloc] init];
     [image selectImagePicker:count selectImagePickerBlock:^(NSArray<UIImage *> *images,
                                                             NSArray<PHAsset *> *assets,BOOL isOriginal){
@@ -130,7 +130,7 @@ multi image
         [self selectMultiImageWithResult:images];
         
     } cancelBlock:^(){
-        NSLog(@"image picker cancel block...");
+        // NSLog(@"image picker cancel block...");
         self.result(nil);
     }];
     
@@ -147,7 +147,7 @@ multi image
         [self selectVideoWithReslut:assets];
         
     } cancelBlock:^(){
-        NSLog(@"image picker cancel block...");
+        // NSLog(@"image picker cancel block...");
         self.result(nil);
     }];
 }
@@ -214,7 +214,7 @@ multi image
             //         [self pickImageWithUIImagePicker];
             //     }
             int count=1;
-            NSLog(@"pickImage...");
+            // NSLog(@"pickImage...");
             [self pickImagePicker:count result:self.result];
         } else {//camera
             [self pickImageWithUIImagePicker];
@@ -263,7 +263,7 @@ multi image
                 break;
             case SOURCE_GALLERY:
                 //[self checkPhotoAuthorization];
-                NSLog(@"SOURCE_GALLERY...");
+                // NSLog(@"SOURCE_GALLERY...");
                 [self pickVideoPicker:self.result];
                 break;
             default:
@@ -516,7 +516,7 @@ didFinishPicking:(NSArray<PHPickerResult *> *)results API_AVAILABLE(ios(14)) {
         }
         return;
     }
-    //NSLog(@"start....");
+    // NSLog(@"start....");
     NSDictionary<NSString *, id> *info =[[NSDictionary alloc]init];
     dispatch_queue_t backgroundQueue =
     dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
@@ -541,10 +541,13 @@ didFinishPicking:(NSArray<PHPickerResult *> *)results API_AVAILABLE(ios(14)) {
             }
             
             if (!originalAsset) {
+                // NSLog(@"originalAsset...."); 
                 // Image picked without an original asset (e.g. User took a photo directly)
                 NSString *savedPath=[self saveImageListWithPickerInfo:info image:image imageQuality:desiredImageQuality];
+                // NSLog(@"savedPath=%@",savedPath);  
                 pathList[i] = savedPath;
             } else {
+                // NSLog(@"PHImageManager....");
                 [[PHImageManager defaultManager]
                  requestImageDataForAsset:originalAsset
                  options:nil
@@ -567,7 +570,7 @@ didFinishPicking:(NSArray<PHPickerResult *> *)results API_AVAILABLE(ios(14)) {
         [operationQueue waitUntilAllOperationsAreFinished];
         dispatch_async(dispatch_get_main_queue(), ^{
             //  NSLog(@"block....");
-            [self handleSavedPathList:pathList];
+            [self handleMultiSavedPathList:pathList];
         });
         // NSLog(@"end....");
     });
@@ -650,7 +653,7 @@ didFinishPicking:(NSArray<PHPickerResult *> *)results API_AVAILABLE(ios(14)) {
 }
 
 -(void)selectVideoWithReslut:(NSArray<PHAsset *> *)assets{
-    NSLog(@"selectVideoWithReslut....");
+    // NSLog(@"selectVideoWithReslut....");
     PHImageManager *manager=[PHImageManager defaultManager];
     PHVideoRequestOptions *options = [[PHVideoRequestOptions alloc]init];
     options.version = PHVideoRequestOptionsVersionOriginal;
@@ -669,16 +672,16 @@ didFinishPicking:(NSArray<PHPickerResult *> *)results API_AVAILABLE(ios(14)) {
                     [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:fileName]];
                     if ([[NSFileManager defaultManager] isReadableFileAtPath:[videoURL path]]) {
                         NSError *error;
-                        NSLog(@"[videoURL path]=%@",[videoURL path]);
-                        NSLog(@"[destination path]=%@",[destination path]);
+                        // NSLog(@"[videoURL path]=%@",[videoURL path]);
+                        // NSLog(@"[destination path]=%@",[destination path]);
                         if (![[videoURL path] isEqualToString:[destination path]]) {
                             
                             
                             NSFileManager *fileManage=[NSFileManager defaultManager];
                             if([fileManage fileExistsAtPath:[destination path]]){
-                                NSLog(@"flie exists...");
+                                // NSLog(@"flie exists...");
                             }else{
-                                NSLog(@"flie not exists...");
+                                // NSLog(@"flie not exists...");
                                 [[NSFileManager defaultManager] copyItemAtURL:videoURL toURL:destination error:&error];
                                 
                                 if (error) {
@@ -694,8 +697,8 @@ didFinishPicking:(NSArray<PHPickerResult *> *)results API_AVAILABLE(ios(14)) {
                         }
                         videoURL = destination;
                         // videoURL=destination;
-                        NSLog(@"file-name=%@",fileName);
-                        NSLog(@"path=%@",videoURL.path);
+                        // NSLog(@"file-name=%@",fileName);
+                        // NSLog(@"path=%@",videoURL.path);
                         
                     }
                     
@@ -889,6 +892,29 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> *)info {
             } else {
                 self.result(pathList);
             }
+        } else {
+            self.result([FlutterError errorWithCode:@"create_error"
+                                            message:@"pathList's items should not be null"
+                                            details:nil]);
+        }
+    } else {
+        // This should never happen.
+        self.result([FlutterError errorWithCode:@"create_error"
+                                        message:@"pathList should not be nil"
+                                        details:nil]);
+    }
+    self.result = nil;
+    _arguments = nil;
+}
+
+- (void)handleMultiSavedPathList:(NSArray *)pathList {
+    if (!self.result) {
+        return;
+    }
+    
+    if (pathList) {
+        if (![pathList containsObject:[NSNull null]]) {
+            self.result(pathList);
         } else {
             self.result([FlutterError errorWithCode:@"create_error"
                                             message:@"pathList's items should not be null"
