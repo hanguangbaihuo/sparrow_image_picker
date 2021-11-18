@@ -28,7 +28,7 @@ Starting with version **0.8.1** the Android implementation support to pick (mult
 
 No configuration required - the plugin should work out of the box.
 
-It is no longer required to add `android:requestLegacyExternalStorage="true"` as an attribute to the `<application>` tag in AndroidManifest.xml, as `image_picker` has been updated to make use of scoped storage.
+It is no longer required to add `android:requestLegacyExternalStorage="true"` as an attribute to the `<application>` tag in AndroidManifest.xml, as `sparrow_image_picker` has been updated to make use of scoped storage.
 
 **Note:** Images and videos picked using the camera are saved to your application's local cache, and should therefore be expected to only be around temporarily.
 If you require your picked image to be stored permanently, it is your responsibility to move it to a more permanent location.
@@ -36,7 +36,7 @@ If you require your picked image to be stored permanently, it is your responsibi
 ### Example
 
 ``` dart
-import 'package:image_picker/image_picker.dart';
+import 'package:sparrow_image_picker/sparrow_image_picker.dart';
 
     ...
     final ImagePicker _picker = ImagePicker();
